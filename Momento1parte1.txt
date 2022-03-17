@@ -1,0 +1,10 @@
+1. (=) es para asignar y (==) es para comparar
+2.
+- byte.
+- short.
+- int.
+- long.
+- Char
+- Double.
+3.Mycrosystems
+4.Paginas web, aplicaciones moviles, videojuegos, sofwares, automatizaciones. etc

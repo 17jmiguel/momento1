@@ -1,0 +1,64 @@
+package com.company;
+import  java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner inputData = new
+                Scanner(System.in);
+
+        double ham,cantham,thamb,dh = 0, per, cantper, tper,dp = 0, salchi, cantsalchi, tsalchi,ds = 0, chori, cantchori,tchori,dc = 0, total, propina;
+        ham = 10000;
+        per = 8000;
+        salchi = 6000;
+        chori = 7000;
+        System.out.print("Ingrese la cantidad de hamburguesas que se solicitan en la mesa: ");
+        cantham=inputData.nextDouble();
+        thamb = ham*cantham;
+        if (thamb>10000) {
+            dh = thamb * 0.95;
+        }else if (thamb<10001){ 
+            dh = thamb;
+        }
+        System.out.print("Ingrese la cantidad de perros que se solicitan en la mesa: ");
+        cantper=inputData.nextDouble();
+        tper = per*cantper;
+        if (tper>8000) {
+            dp = tper * 0.95;
+        }else if (tper<8001){
+            dp = tper;
+        }
+        System.out.print("Ingrese la cantidad de salchipapas que se solicitan en la mesa: ");
+        cantsalchi=inputData.nextDouble();
+        tsalchi = salchi*cantsalchi;
+        if (tsalchi>6000) {
+            ds = tsalchi * 0.95;
+        }else if (tsalchi<6001){
+            ds = tsalchi;
+        }
+        System.out.print("Ingrese la cantidad de chorizos que se solicitan en la mesa: ");
+        cantchori=inputData.nextDouble();
+        tchori = chori*cantchori;
+        if (tchori>7000) {
+            dc = tchori * 0.95;
+        }else if (tchori<7001){
+            dc = tchori;
+        }
+        total = dh + dp + ds + dc;
+        if (total>20000){
+            total=total * 0.80;
+            System.out.print("Por compras superiores a $20000 se realiza un descuento del 20%, por lo tanto el total es de: "+total);
+        }else if (total<20001){
+            System.out.print("La ceunta total es de: $"+total);
+        }
+        System.out.print ("Desea incluir la propina? (1)SI (2)NO ");
+        propina = inputData.nextDouble();
+        if (propina == 1){
+            total = total * 1.1;
+            System.out.print("El total de la cuenta es de $"+total);
+        } else if (propina == 2){
+            System.out.print("El total de la cuenta es de $"+total);
+        }
+
+    }
+
+}
